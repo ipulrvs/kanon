@@ -1,0 +1,91 @@
+t.user {
+	username
+	password
+	privilage []
+	userdetail []
+}
+
+t.userdetail {
+	fullname 
+	email
+	...
+}
+
+t.privilage {
+	name
+	desc
+}
+
+t.module {
+	name
+	user []
+	menu []
+}
+
+t.menu {
+	name
+	baseUrl
+	icon
+	label
+	tag
+	submenu []
+}
+
+t.submenu {
+	menu <<
+	name
+	baseUrl
+	icon
+	tag
+	label
+}
+
+t.page {
+	pagetype
+	menu <<
+	submenu <<
+	name 
+	desc
+	html
+	label
+	tag
+	lastupdate
+	post []
+	comment []
+}
+
+t.pagetype {
+	name 
+	desc
+}
+
+t.category {
+	name
+	desc
+	tag
+	label
+}
+
+
+t.post {
+	posttype 
+	category <<
+	page <<
+	name
+	desc
+	html
+	label
+	tag
+	lasupdate
+	comment []
+}
+
+t.posttype {
+	name 
+	desc
+}
+
+t.comment {
+	user
+	comment
+}
